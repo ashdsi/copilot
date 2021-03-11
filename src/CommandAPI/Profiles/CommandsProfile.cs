@@ -9,9 +9,16 @@ namespace CommandAPI.Profiles
             public CommandsProfile()
             {
                //Source ➤ Target
-               CreateMap<Command, CommandReadDto>();
-               CreateMap<CommandCreateDto, Command>();
-            }
+               CreateMap<Command, CommandReadDto>();        //GET
+               
+               CreateMap<CommandCreateDto, Command>();      //POST
+               
+               CreateMap<CommandUpdateDto, Command>();      //PUT
+
+               CreateMap<Command, CommandUpdateDto>();      //PATCH
+
+
+        }
         
 
     }
